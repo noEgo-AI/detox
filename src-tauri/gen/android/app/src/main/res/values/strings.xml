@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FocusLock</string>
+    <string name="main_activity_title">FocusLock</string>
+    <string name="accessibility_service_description">FocusLock이 방해 앱(YouTube, Instagram, 치지직 등)의 실행을 감지하고 차단합니다. 설정된 시간까지 집중을 유지할 수 있도록 도와줍니다.</string>
+</resources>

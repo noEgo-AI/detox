@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npx tauri icon icon.png)",
+      "Bash(npm run tauri:*)",
+      "Bash(./gradlew:*)",
+      "Bash(adb devices:*)",
+      "Bash(adb shell pm list packages:*)",
+      "Bash(adb shell:*)",
+      "Bash(adb logcat:*)",
+      "Bash(adb install:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(D:tauridetoxsrc-taurigenandroidgradlew.bat --stop)",
+      "Bash(cmd /c \"cd /d D:\\tauri\\detox\\src-tauri\\gen\\android && gradlew.bat --stop\")",
+      "Bash(cmd /c \"cd /d D:\\tauri\\detox\\src-tauri\\gen\\android && gradlew.bat assembleRelease --no-daemon 2>&1\")",
+      "Bash(D:/tauri/detox/src-tauri/gen/android/gradlew.bat:*)",
+      "Bash(timeout:*)",
+      "Bash(cat:*)",
+      "Bash(adb kill-server:*)",
+      "Bash(adb start-server:*)",
+      "Bash(findstr:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

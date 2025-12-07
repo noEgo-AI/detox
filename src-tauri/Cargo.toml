@@ -1,0 +1,43 @@
+[package]
+name = "focuslock"
+version = "0.1.0"
+description = "Digital Detox - Block distracting apps and websites"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "focuslock_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Database
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# Error handling
+thiserror = "2"
+
+# Desktop-only dependencies
+[target.'cfg(not(target_os = "android"))'.dependencies]
+tauri-plugin-autostart = "2"
+sysinfo = "0.31"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "processthreadsapi", "tlhelp32", "handleapi"] }
